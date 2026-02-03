@@ -34,5 +34,7 @@
         lib.mkDefault
         self.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
+
+    services.udev.packages = self;
   };
 }
