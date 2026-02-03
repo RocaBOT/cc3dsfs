@@ -35,11 +35,8 @@
         self.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
-    nixosModules.dafault = {
-      pkgs,
-      ...
-    }: {
-      config = { services.udev.packages = self.packages.${pkgs.stdenv.hostPlatform.system}.default };
+    nixosModules.dafault = {pkgs, ...}: {
+      config = {services.udev.packages = self.packages.${pkgs.stdenv.hostPlatform.system}.default;};
     };
   };
 }
