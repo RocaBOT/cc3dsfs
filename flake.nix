@@ -35,7 +35,7 @@
         self.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
-    nixosModules.dafault = {
+    nixosModules.default = {
       pkgs,
       lib,
       ...
