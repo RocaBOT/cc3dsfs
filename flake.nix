@@ -33,8 +33,7 @@
       programs.cc3dsfs.package =
         lib.mkDefault
         self.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      services.udev.packages = self.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
-
-    services.udev.packages = self;
   };
 }
