@@ -16,7 +16,12 @@
   harfbuzz,
   xorg,
   libxi,
+  nixpkgs,
+  system,
 }: let
+  pkgs = import nixpkgs {
+    inherit system;
+  };
   sfml_src = pkgs.fetchFromGitHub {
     owner = "SFML";
     repo = "SFML";
@@ -41,10 +46,10 @@ in
     inherit version;
     src = ./..;
 
-    nativeBuildInputs = with pkgs; [
+    nativeBuildInputs = [
       cmake
     ];
-    buildInputs = with pkgs; [
+    buildInputs = [
       libgcc
       git
       libxrandr.dev
