@@ -16,12 +16,8 @@
   harfbuzz,
   xorg,
   libxi,
-  nixpkgs,
-  system,
+  pkgs,
 }: let
-  pkgs = import nixpkgs {
-    inherit system;
-  };
   sfml_src = pkgs.fetchFromGitHub {
     owner = "SFML";
     repo = "SFML";
