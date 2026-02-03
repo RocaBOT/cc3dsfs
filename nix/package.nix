@@ -80,7 +80,7 @@ in
     installPhase = ''
       mkdir -p $out/bin
       install -Dm755 bin/cc3dsfs $out/bin/
-      mkdir -p $out/lib/udev/rules.d
-      cp ../usb_rules/*.rules $out/lib/udev/rules.d/
+      mkdir -p $out/etc/udev/rules.d
+      cp ../usb_rules/*.rules $out/etc/udev/rules.d/
     '';
   }
