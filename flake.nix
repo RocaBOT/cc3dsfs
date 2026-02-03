@@ -40,7 +40,7 @@
         };
       in {
         default = pkgs.stdenv.mkDerivation {
-          name = "cc3dsfs";
+          pname = "cc3dsfs";
           version = "2026.01.24";
           src = self;
 
