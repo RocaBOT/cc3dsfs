@@ -13,7 +13,7 @@
     );
   in {
     packages = eachSystem (system: {
-      default = forAllSystems.${system}.cc3dsfs;
+      default = pkgsFor.${system}.cc3dsfs;
     });
 
     overlays = {
