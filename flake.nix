@@ -35,8 +35,15 @@
         self.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
-    nixosModules.dafault = {pkgs, ...}: {
-      config = {services.udev.packages = self.packages.${pkgs.stdenv.hostPlatform.system}.default;};
+    nixosModules.dafault = {
+      pkgs,
+      lib,
+      ...
+    }: {
+      imports = [./nix/home-module.nix];
+      programs.cc3dsfs.package =
+        lib.mkDefault
+        self.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
   };
 }
