@@ -23,29 +23,5 @@
         };
       };
     };
-
-    homeModules.default = {
-      pkgs,
-      lib,
-      ...
-    }: {
-      imports = [./nix/home-module.nix];
-      programs.cc3dsfs.package =
-        lib.mkDefault
-        self.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    };
-
-    nixosModules.default = {
-      pkgs,
-      lib,
-      ...
-    }: {
-      imports = [./nix/home-module.nix];
-      programs.cc3dsfs.package =
-        lib.mkDefault
-        self.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    };
-
-    config = {services.udev.packages = [self.overlays.default];};
   };
 }
