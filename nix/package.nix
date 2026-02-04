@@ -84,7 +84,7 @@ in
       cp ../usb_rules/*.rules $out/lib/udev/rules.d/
       mkdir -p $out/share/applications
       cp ../cc3dsfs.desktop $out/share/applications/
-      mkdir -p $out/share/icons/hicolor/512x512
+      mkdir -p $out/share/icons/hicolor/512x512/apps
       cp ../3ds.png $out/share/icons/hicolor/512x512/apps/cc3dsfs.png
     '';
   }
