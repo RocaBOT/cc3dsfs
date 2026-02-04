@@ -1,6 +1,6 @@
 {
   description = "cc3dsfs - 3ds video capture software";
-  inputs.nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
   outputs = {
     self,
