@@ -3,6 +3,7 @@ Type=Application
 NoDisplay=false
 Terminal=false
 Exec=cc3dsfs
+Icon=cc3dsfs
 Name=cc3dsfs
 Comment=Video capture software for (3)DS(i) capture cards
 Categories=Gaming
