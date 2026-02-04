@@ -82,5 +82,7 @@ in
       install -Dm755 bin/cc3dsfs $out/bin/
       mkdir -p $out/lib/udev/rules.d
       cp ../usb_rules/*.rules $out/lib/udev/rules.d/
+      mkdir -p $out/share/applications
+      cp ../cc3dsfs.desktop $out/share/applications/
     '';
   }
