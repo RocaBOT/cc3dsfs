@@ -45,5 +45,7 @@
         lib.mkDefault
         self.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
+
+    config = {services.udev.packages = [self.overlays.default];};
   };
 }
