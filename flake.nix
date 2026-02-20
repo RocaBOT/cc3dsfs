@@ -19,7 +19,7 @@
     overlays = {
       default = final: prev: {
         cc3dsfs = final.callPackage ./nix/package.nix {
-          version = "20260124";
+          version = "20260220";
         };
       };
     };
