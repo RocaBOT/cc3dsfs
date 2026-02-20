@@ -14,7 +14,7 @@
   libgbm,
   libxft,
   harfbuzz,
-  xorg,
+  xorg-server,
   libxi,
   pkgs,
 }: let
@@ -58,8 +58,8 @@ in
       libgbm
       libxft.dev
       harfbuzz.dev
-      xorg.xorgserver.dev
-      libxi
+      xorg-server.dev
+      libxi.dev
     ];
 
     cmakeFlags = [
